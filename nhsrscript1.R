@@ -25,13 +25,7 @@ library(gridGraphics)
 
 sf_use_s2(FALSE)
 
-library(usethis)
-library(gitcreds)
-use_git_config(user.name = "num4yr", user.email = "numayrhabib@aol.com")
-usethis::git_sitrep()
-usethis::git_vaccinate()
-usethis::create_github_token()
-gitcreds::gitcreds_set()
+
 #Getting data ------------------------------------------------------------------
 NHS_Region_Outline <- st_simplify(st_read(
   "~/NHSr/NHSR_DATA/NHS_England_Regions_April_2021_EN_BGC_2022_5536111515427249197"),dTolerance = 75)
